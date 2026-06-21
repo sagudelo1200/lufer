@@ -4,6 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  // base debe apuntar al nombre del repositorio cuando se despliega en GitHub Pages
+  base: '/lufer/',
   plugins: [
     react(),
     tailwindcss(),
@@ -11,8 +13,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
       manifest: {
-        name: 'MOTORLINE — Sistema de Gestión',
-        short_name: 'MOTORLINE',
+        name: 'LUFER — Sistema de Gestión',
+        short_name: 'LUFER',
         description: 'Sistema de gestión de servicios automotrices',
         theme_color: '#EA580C',
         background_color: '#ffffff',
