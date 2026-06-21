@@ -6,7 +6,8 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "fastapi>=0.138.0",
-    "uvicorn>=0.49.0",
+    "pydantic-settings>=2.14.2",
+    "uvicorn[standard]>=0.49.0",
 ]
 
 [tool.ruff]
@@ -25,9 +26,12 @@ select = [
     "I",   # imports ordenados
     "UP",  # modernización de Python
     "B",   # bugs comunes
+    "Q",   # quotes
 ]
+ignore = ["Q000", "Q003"]
 
 [dependency-groups]
 dev = [
+    "pytest>=9.1.1",
     "ruff>=0.15.18",
 ]
