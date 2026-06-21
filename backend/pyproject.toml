@@ -1,0 +1,33 @@
+[project]
+name = "backend-lufer"
+version = "0.1.0"
+description = "FastAPI para servicio de backend de Lufer"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.138.0",
+    "uvicorn>=0.49.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.ruff.lint]
+select = [
+    "E",   # errores estilo pycodestyle
+    "F",   # errores de Pyflakes
+    "I",   # imports ordenados
+    "UP",  # modernización de Python
+    "B",   # bugs comunes
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.18",
+]
